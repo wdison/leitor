@@ -2,7 +2,10 @@
 	function install(Vue) {
 		Vue.component('home-page', {
 			replace: false,
-			template: '<menu-bar></menu-bar>',
+			template: [
+				'<menu-bar></menu-bar>',
+				'<wdi-footer></wdi-footer>'
+			].join(''),
 			props: ['id'],
 			data: function() {
 				return {'id': this.id};
