@@ -8,7 +8,7 @@
 						'<div class="nav-wrapper container">',
 							'<div class="row">',
 								'<div class="col s6">',
-									'<a href="#" class="brand-logo left"><i class="fas fa-book-reader"></i>Leitor</a>',
+									'<a href="#" class="brand-logo left"><i class="fas fa-book-reader"></i>{{titulo}}</a>',
 								'</div>',
 								'<div class="col s6">',
 									'<div class="row">',
@@ -47,7 +47,10 @@
 			].join(''),
 			props: ['id'],
 			data: function() {
-				return {'id': this.id};
+				return {
+					'id': this.id,
+					titulo: 'Leitor'
+				};
 			},
 			compiled: function() {
 				this.$data = util.getPaginationData(this.id);
