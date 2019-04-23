@@ -1,0 +1,6 @@
+{
+  "directory": "lib", 
+  "proxy": "http://aguasdesaopedro.prodesp-sede.local:80",
+  "https-proxy":"http://aguasdesaopedro.prodesp-sede.local:80",
+  "strict-ssl": false 
+}

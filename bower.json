@@ -1,0 +1,32 @@
+{
+  "name": "leitor",
+  "authors": [
+    "Jose Wdison de Souza <jwsouza@apoioprodesp.sp.gov.br>"
+  ],
+  "description": "Leitor de arquivos",
+  "main": "index.html",
+  "keywords": [
+    "vuejs"
+  ],
+  "license": "MIT",
+  "homepage": "test.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.5",
+    "vue-i18n": "^8.10.0",
+    "vue-grid": "^0.1.2",
+    "font-awesome": "^5.8.1",
+    "materialize": "^1.0.0",
+    "pdfjs-dist": "^2.1.266",
+    "pdfjs-dist-viewer-min": "^2.1.266",
+    "vue-ui": "https://github.com/vuejs/ui.git#^0.9.2"
+  }
+}
