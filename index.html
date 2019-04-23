@@ -12,17 +12,30 @@
 </head>
 <body>
 
+	<div id="wdiApp">
+		<home-page id="home"></home-page>
+	</div>
 
 	<!-- jQuery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<!-- Materialize JS -->
-	<script type="text/javascript" src="js/materialize.js"></script>
+	<!-- TODO tentar deletar esse script -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
 
-	<script type="text/javascript">
-		$(()=>{
-			$('.sidenav').sidenav();
-			$('.tabs').tabs();
-		});
-	</script>
+
+
+
+
+
+
+	<!-- Materialize JS -->
+	<script type="text/javascript" src="lib/materialize/dist/js/materialize.js"></script>
+	<!-- Vue Js -->
+	<script type="text/javascript" src="lib/vue/dist/vue.min.js"></script>
+
+	<script type="text/javascript" src="page/menu.js"></script>
+	<script type="text/javascript" src="page/home.js"></script>
+
+	<!-- O main deve ser o ultimo script -->
+	<script type="text/javascript" src="wdi_main.js"></script>
+
 </body>
 </html>
