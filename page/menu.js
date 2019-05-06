@@ -15,15 +15,15 @@
 										'<div class="col s10">',
 											'<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>',
 											'<div class="right hide-on-med-and-down">',
-												'<ul class="tabs tabs-transparent">',
-													'<li class="tab"><a class="active" href="#test1">PDF</a></li>',
-													'<li class="tab"><a href="#test2">Html</a></li>',
-													'<li class="tab"><a href="#test3">Doc(x)</a></li>',
-													'<li class="tab"><a href="#test4">Options</a></li>',
+												'<ul>',
+													'<li><a class="active" href="#test1">PDF</a></li>',
+													'<li><a href="#test2">Html</a></li>',
+													'<li><a href="#test3">Doc(x)</a></li>',
+													'<li><a href="#test4">Options</a></li>',
 												'</ul>',
 											'</div>',
 										'</div>',
-										'<div class="col s2">',
+										'<div class="col s2 user-view">',
 											'<a href="index.html#" class="btn-floating btn-large waves-effect waves-light"><i class="far fa-smile-beam right"></i></a>',
 											'<a class="dropdown-trigger" href="#!" data-target="dropdown1">',
 												'<span class="user-info ng-binding">',
@@ -52,13 +52,15 @@
 					titulo: 'Leitor'
 				};
 			},
-			compiled: function() {
-				this.$data = util.getPaginationData(this.id);
-			},
+			compiled: function() {},
 			methods: {
-				isCurrent: function(index) {
-					return index === this.page;
+				_init(){
+					var elems = document.querySelectorAll('.sidenav');
+					var instances = M.Sidenav.init(elems);
 				}
+			},
+			created: function() {
+				this._init();
 			}
 		});
 	}

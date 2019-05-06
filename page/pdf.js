@@ -1,7 +1,7 @@
 (function() {
 	function install(Vue) {
 		Vue.component('pdf', {
-			replace: true,
+			replace: false,
 			template: [
 				'<nav>',
 					'<ul class="pagination">',
@@ -23,24 +23,8 @@
 			data: function() {
 				return {};
 			},
-			compiled: function() {
-				this.$data = util.getPaginationData(this.id);
-			},
-			methods: {
-				isCurrent: function(index) {
-					return index === this.page;
-				},
-				next: function() {
-					if(this.page < this.pageCount - 1) {
-						this.page++;
-					}
-				},
-				prev: function() {
-					if(this.page > 0) {
-						this.page--;
-					}
-				}
-			}
+			compiled: function() {},
+			methods: {}
 		});
 	}
 

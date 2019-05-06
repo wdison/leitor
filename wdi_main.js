@@ -1,8 +1,4 @@
-$(()=>{
-	$('.sidenav').sidenav();
-	$('.tabs').tabs();
-
-
+document.addEventListener('DOMContentLoaded', function() {
 	var vueParam = {
 		el:'#wdiApp',
 		data: {
@@ -12,3 +8,10 @@ $(()=>{
 
 	let app = new Vue(vueParam);
 });
+
+/*$(()=>{
+	$('.sidenav').sidenav();
+	$('.tabs').tabs();
+
+
+});*/

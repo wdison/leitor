@@ -1,16 +1,23 @@
 (function() {
 	function install(Vue) {
-		Vue.component('home-page', {
+		Vue.component('wdi-footer', {
 			replace: false,
 			template: [
-				'<div>',
-					'<menu-bar></menu-bar>',
-					'<wdi-footer></wdi-footer>',
-				'</div>'
+				'<footer class="page-footer fixed-down light-blue darken-3">',
+					'<div class="footer-copyright">',
+						'<div class="container">',
+							'© 2019 Copyright Wdison',
+							'<a class="grey-text text-lighten-4 right" href="#!">Sobre</a>',
+						'</div>',
+					'</div>',
+				'</footer>'
 			].join(''),
 			props: ['id'],
 			data: function() {
-				return {'id': this.id};
+				return {
+					'id': this.id,
+					titulo: 'Leitor'
+				};
 			},
 			compiled: function() {},
 			methods: {}
