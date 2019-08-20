@@ -8,10 +8,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	let app = new Vue(vueParam);
 });
-
-/*$(()=>{
-	$('.sidenav').sidenav();
-	$('.tabs').tabs();
-
-
-});*/

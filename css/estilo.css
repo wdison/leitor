@@ -4,3 +4,17 @@
 	left:0;
 	width:100%;
 }
+
+.user-info {
+	max-width: 150px;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	line-height: 15px;
+	position: relative;
+	top: 6px;
+	padding-left: 5px;
+}
