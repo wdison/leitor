@@ -5,7 +5,9 @@
 			template: [
 				'<div>',
 					'<menu-bar></menu-bar>',
-					'<router-view></router-view>',
+					'<div class="container">',
+						'<router-view></router-view>',
+					'</div>',
 					'<wdi-footer></wdi-footer>',
 				'</div>'
 			].join(''),
