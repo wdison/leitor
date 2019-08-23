@@ -1,10 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-	var vueParam = {
-		el:'#wdiApp',
-		data: {
-			titulo: 'Leitor'
-		}
-	};
+(function(wdi) {
+	'use strict';
+	wdi.use(install);
 
-	let app = new Vue(vueParam);
-});
+	function install(wdi, Vue) {
+		document.addEventListener('DOMContentLoaded', function() {
+			let _routes = wdi.context.routerHelp.getRoutes();
+
+			var context = {
+				routes: _routes
+			};
+			var router = new VueRouter(context);
+
+			var vueParam = {
+				el:'#wdiApp',
+				router,
+				data: {
+					titulo: 'Leitor'
+				}
+			};
+
+			let app = new Vue(vueParam);
+		});
+	}
+}(wdi));
+
+
