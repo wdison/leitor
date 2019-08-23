@@ -26,12 +26,14 @@
 					var hasOtherwise = false;
 					var _states = [];
 					var _routes = [];
+					var _router = undefined;
 
 					var service = {
 						'configureStates': configureStates,
 						'configureOtherwise': configureOtherwise,
 						'getStates': getStates,
-						'getRoutes': getRoutes
+						'getRoutes': getRoutes,
+						'getRouter': getRouter
 					};
 
 					return service;
@@ -55,6 +57,18 @@
 
 					function getStates() { return Object.assign([], _states)}
 					function getRoutes() { return Object.assign([], _routes)}
+					
+					function getRouter() { 
+						if(!_router){
+							let _routes = service.getRoutes();
+
+							var context = {
+								routes: _routes
+							};
+							_router = new VueRouter(context);
+						}
+						return _router;
+					}
 				}
 
 				function createComponentProvider(){

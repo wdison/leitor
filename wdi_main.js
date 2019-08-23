@@ -4,12 +4,7 @@
 
 	function install(wdi, Vue) {
 		document.addEventListener('DOMContentLoaded', function() {
-			let _routes = wdi.context.routerHelp.getRoutes();
-
-			var context = {
-				routes: _routes
-			};
-			var router = new VueRouter(context);
+			var router = wdi.context.routerHelp.getRouter();
 
 			var vueParam = {
 				el:'#wdiApp',
@@ -23,5 +18,3 @@
 		});
 	}
 }(wdi));
-
-

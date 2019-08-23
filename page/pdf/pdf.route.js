@@ -12,6 +12,7 @@
 	            {
 	                'state': componentName,
 	                'config': {
+	                	'name': componentName,
 	                    'path': '/pdf',
 	                    'component': component,
 	                    /*ncyBreadcrumb: {
