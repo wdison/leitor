@@ -1,4 +1,5 @@
 (function(wdi) {
+	'use strict';
 	wdi.use(install);
 
 	function install(wdi, Vue) {
@@ -23,6 +24,5 @@
 				}
 			);
 		}
-
 	}
 }(wdi));
