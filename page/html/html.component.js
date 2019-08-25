@@ -8,7 +8,7 @@
 		wdi.context.component(componentName, getComponent());
 
 		function getComponent(){
-			return Vue.component(componentName, {
+			let component = Vue.component(componentName, {
 					replace: false,
 					template: [
 						'<div>',
@@ -23,6 +23,7 @@
 					methods: {}
 				}
 			);
+			return component;
 		}
 	}
 }(wdi));

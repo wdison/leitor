@@ -84,6 +84,21 @@
 							return componentResult;
 						} else {
 							if(componentResult) throw 'component '+componentName+' alredy exists';
+
+							if(component.templateUrl){
+								let componentConfig = component;
+								component = Vue.component(componentName, function(resolve, reject) {
+										axios.get(component.templateUrl).then(function(r){
+											console.log(r);
+											componentConfig.template = r.data;
+											resolve(componentConfig);
+										}, function(err){
+											console.log(err);
+											resolve(componentConfig);
+										});
+									}
+								);
+							}
 							_components[componentName] = component;
 						}
 					}
