@@ -88,13 +88,11 @@
 							if(component.templateUrl){
 								let componentConfig = component;
 								component = Vue.component(componentName, function(resolve, reject) {
-										axios.get(component.templateUrl).then(function(r){
-											console.log(r);
+										axios.get(componentConfig.templateUrl).then(function(r){
 											componentConfig.template = r.data;
 											resolve(componentConfig);
-										}, function(err){
-											console.log(err);
-											resolve(componentConfig);
+										}, function(err) {
+											reject("Error in template '"+componentConfig.templateUrl+"' with msg '"+err.message+"'");
 										});
 									}
 								);
