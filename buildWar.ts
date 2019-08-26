@@ -10,7 +10,7 @@
 //Pre-requisitos para funcionar:
 //Node instalado;
 //Está na aba de um arquivo da mesma pasta que o arquivo 'buildWar.ts', podendo ser o próprio
-//ter executado npm install na pasta
+//ter executado "npm install archiver" na pasta
 
 
 // require modules
