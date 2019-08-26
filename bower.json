@@ -27,7 +27,6 @@
     "font-awesome": "^5.8.1",
     "materialize": "^1.0.0",
     "pdfjs-dist": "^2.1.266",
-    "pdfjs-dist-viewer-min": "^2.1.266",
     "vue-ui": "https://github.com/vuejs/ui.git#^0.9.2"
   }
 }
