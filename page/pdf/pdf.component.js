@@ -36,6 +36,7 @@
 				console.log('updated');
 			},
 			beforeDestroy: function() {
+				console.log('beforeDestroy');
 				wdi.audio.stop();
 			},
 			destroyed: function() {

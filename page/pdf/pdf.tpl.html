@@ -103,42 +103,51 @@
     </div>
 
 
-    <footer class="page-footer green">
-        <div class="container">
-            <div class="row">
-                <div class="col s1">Áudio</div>
-                <p class="range-field col s10">
-                    <input type="range" id="progress_audio" min="0" max="100" value="0" />
-                </p>
-                <div class="col s1"></div>
-            </div>
-           
-            <div class="row">
-
-                <div class="col s5">
-                     <div class="row">
-                        <div class="col s12">
-                            <label>Página</label>
-                            <p class="range-field">
-                                <input type="range" id="progress_page" min="0" max="0" value="0" />
-                            </p>
+    <div class="row grey lighten-2">
+        <div class="col s1"></div>
+        <div class="col m5 s12">
+             <div class="row">
+                <div class="col s12">
+                    <label class="black-text">Página</label>
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col xl3 l4 m4 s5">
+                            <span id="wdi_pdf_first" title="Voltar a primeira pagina"><i class="fa fa-fast-backward black-text"></i></span>
+                            <span id="wdi_pdf_prev" title="Voltar uma pagina"><i class="fa fa-backward black-text"></i></span>
+                            <span id="wdi_pdf_next" title="Avançar uma pagina"><i class="fa fa-forward black-text"></i></span>
+                            <span id="wdi_pdf_last" title="Avançar para a ultima pagina"><i class="fa fa-fast-forward black-text"></i></span>
                         </div>
-                        <div class="col s12">
-                            <span id="wdi_pdf_first" class="btn"><i class="fa fa-fast-backward"></i></span>
-                            <span id="wdi_pdf_prev" class="btn"><i class="fa fa-backward"></i></span>
-                            <span id="wdi_pdf_next" class="btn"><i class="fa fa-forward"></i></span>
-                            <span id="wdi_pdf_last" class="btn"><i class="fa fa-fast-forward"></i></span>
+                        <div class="col l5 m6 s6">
+                            <span class="range-field">
+                                <input type="range" id="progress_page" min="0" max="0" value="0" />
+                            </span>
                         </div>
                     </div>
-
-                </div>
-                <div class="col s1"></div>
-                <div class="col s6">
-                    <span id="wdi_pause" class="btn" title="Pause"><i class="fa fa-pause black-text"></i></span>
-                    <span id="wdi_play" class="btn" title="Play"><i class="fa fa-play black-text"></i></span>
-                    <span id="wdi_stop" class="btn" title="Stop"><i class="fa fa-stop black-text"></i></span>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="col s1"></div>
+        <div class="col m5 s12">
+            <div class="row">
+                <div class="col s12">
+                    <label class="black-text">Áudio</label>
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col xl3 l4 m4 s5">
+                            <span id="wdi_pause" title="Pause"><i class="fa fa-pause black-text"></i></span>
+                            <span id="wdi_play" title="Play"><i class="fa fa-play black-text"></i></span>
+                            <span id="wdi_stop" title="Stop"><i class="fa fa-stop black-text"></i></span>
+                        </div>
+                        <div class="col l5 m6 s6">
+                            <span class="range-field">
+                                <input type="range" id="progress_audio" min="0" max="100" value="0" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
