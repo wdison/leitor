@@ -1,4 +1,148 @@
 <div>
-	<h3>PDF</h3>
-	<p>Pagina em manutenção</p>
+	
+
+	<div>
+		<h3>PDF</h3>
+		<p>Pagina em manutenção</p>
+	</div>
+
+
+
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+    <div class="card sticky-action">
+    	<div class="card-reveal ">
+    		<span class="card-title grey-text text-darken-4">Configuração<i class="material-icons right">close</i></span>
+    		<!-- Controle do audio -->
+    		<div id="controle_audio">
+    			<div>
+    				<div class="row">
+    					<nav>
+    						<div class="nav-wrapper blue">
+    							<div class="col s12">
+    								<a href="#" class="brand-logo">Configuração de Áudio</a>
+    							</div>
+    						</div>
+    					</nav>
+    				</div>
+    				<form class="col s8 offset-s2">
+    					<div class="row">
+    						<label>Choose voice</label>
+    						<select id="voices"></select>
+    					</div>
+    					<div class="row">
+    						<div class="col s6">
+    							<label>Rate</label>
+    							<p class="range-field">
+    								<input type="range" id="rate" min="1" max="100" value="40" />
+    							</p>
+    						</div>
+    						<div class="col s6">
+    							<label>Pitch</label>
+    							<p class="range-field">
+    								<input type="range" id="pitch" min="0" max="100" value="50" />
+    							</p>
+    						</div>
+    						<div class="col s12">
+    							<p>Rate and Pitch only work with native voice.</p>
+    						</div>
+    					</div>
+    					<div class="row">
+    						<div class="input-field col s12">
+    							<textarea id="message" class="materialize-textarea">Texto de teste de áudio para não ficar sem falar nada, por favor coloque outros textos aqui.</textarea>
+    							<label>Write message</label>
+    						</div>
+    					</div>
+    				</form>
+    			</div>
+
+    			<div id="modal1" class="modal">
+    				<h4>Speech Synthesis not supported</h4>
+    				<p>Your browser does not support speech synthesis.</p>
+    				<p>We recommend you use Google Chrome.</p>
+    				<div class="action-bar">
+    					<a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="card-content" >
+    		<span class="card-title activator grey-text text-darken-4">
+    			<div class="row" title="Configurar PDF">
+    				<div class="file-field input-field">
+    					<div class="btn">
+    						<span>File</span>
+    						<input id="pdf" type="file" onchange="loadPdf()" accept="application/pdf">
+    					</div>
+    					<div class="file-path-wrapper">
+    						<input class="file-path" type="text">
+    					</div>
+    				</div>
+    				<i class="material-icons right">more_vert</i>
+    			</div>
+
+    		</span>
+    		<div class="container" >
+    			<div class="row center">
+    				<canvas id="the-canvas" style="display: none;"></canvas>
+    				<img id="imagem" style="max-width: 100%;"></img>
+    				<div id="wdi_pdf_text" style="display: none;"></div>
+    			</div>
+
+
+    			<div class="row center">
+    				<span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+    			</div>
+    		</div>
+
+    	</div>
+
+
+    </div>
+
+
+    <footer class="page-footer green">
+        <div class="container">
+            <div class="row">
+                <div class="col s1">Áudio</div>
+                <p class="range-field col s10">
+                    <input type="range" id="progress_audio" min="0" max="100" value="0" />
+                </p>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1">Página</div>
+                <p class="range-field col s10">
+                    <input type="range" id="progress_page" min="0" max="0" value="0" />
+                </p>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s5">
+                    <span id="wdi_pdf_first" class="btn"><i class="fa fa-fast-backward"></i></span>
+                    <span id="wdi_pdf_prev" class="btn"><i class="fa fa-backward"></i></span>
+                    <span id="wdi_pdf_next" class="btn"><i class="fa fa-forward"></i></span>
+                    <span id="wdi_pdf_last" class="btn"><i class="fa fa-fast-forward"></i></span>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s6">
+                    <span id="wdi_pause" class="btn"><i class="fa fa-pause"></i></span>
+                    <span id="wdi_play" class="btn"><i class="fa fa-play"></i></span>
+                    <span id="wdi_stop" class="btn"><i class="fa fa-stop"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 WDI Company
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf_viewer.js"></script> -->
+
 </div>
