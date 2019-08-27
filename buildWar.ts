@@ -18,7 +18,8 @@ var fs = require('fs');
 var archiver = require('archiver');
 
 // create a file to stream archive data to.
-var output = fs.createWriteStream(__dirname + '/leitor.war');
+/*var output = fs.createWriteStream(__dirname + '/leitor.war');*/
+var output = fs.createWriteStream('E:/servers/jboss-eap-6.4/standalone/deployments' + '/leitor.war');
 var archive = archiver('zip', {
     zlib: { level: 9 } // Sets the compression level.
 });

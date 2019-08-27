@@ -11,7 +11,36 @@
 			data: function() {
 				return {};
 			},
-			compiled: function() {},
+			beforeMount: function() {
+				console.log('beforeMount');
+			},
+			mounted: function() {
+				console.log('mounted');
+				var elems = document.querySelectorAll('select');
+				var options = document.querySelectorAll('option');
+				var instances = M.FormSelect.init(elems, options);
+			},
+			computed: function() {
+				console.log('computed');
+			},
+			beforeCreate: function() {
+				console.log('beforeCreate');
+			},
+			created: function() {
+				console.log('created');
+			},
+			beforeUpdate: function() {
+				console.log('beforeUpdate');
+			},
+			updated: function() {
+				console.log('updated');
+			},
+			beforeDestroy: function() {
+				wdi.audio.stop();
+			},
+			destroyed: function() {
+				console.log('destroyed');
+			},
 			methods: {}
 		}
 

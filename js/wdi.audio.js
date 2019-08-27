@@ -132,20 +132,24 @@
 })(window||{});
 
 $(function(){
+    let timeoutInit = 3000;
     speechSynthesis.onvoiceschanged = function() {
-        var $voicelist = $('#voices');
+        setTimeout(function(){
+            var $voicelist = $('#voices');
 
-        if($voicelist.find('option').length == 0) {
-            speechSynthesis.getVoices().forEach(function(voice, index) {
-                var $option = $('<option>')
-                .val(index)
-                .html(voice.name + (voice.default ? ' (default)' :''));
+            if($voicelist.find('option').length == 0) {
+                speechSynthesis.getVoices().forEach(function(voice, index) {
+                    var $option = $('<option>')
+                    .val(index)
+                    .html(voice.name + (voice.default ? ' (default)' :''));
 
-                $voicelist.append($option);
-            });
+                    $voicelist.append($option);
+                });
 
-            $voicelist.material_select();
-        }
+                $voicelist.material_select();
+            }
+            timeoutInit = 0;
+        }, timeoutInit);
     }
     $('#wdi_play').click(wdi.audio.play);
     $('#wdi_pause').click(wdi.audio.pause);
