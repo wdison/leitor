@@ -22,6 +22,8 @@
 					}
 				};
 
+				/*para configurar filhos*/
+				/*basta colocar '.' para separar.*/
 				function routerHelper() {
 					var hasOtherwise = false;
 					var _states = [];
@@ -41,8 +43,33 @@
 					//Configura os states do app
 					function configureStates(states) {
 						states.forEach(function(state) {
-							_states.push(state);
-							_routes.push(state.config);
+							let statesName = state.state.split('.');
+							if(statesName.length > 1) {
+								addChild(state, statesName, _states, 0);
+							} else {
+								state._name = state.state;
+								_states.push(state);
+								_routes.push(state.config);
+							}
+						});
+					}
+
+					function addChild(state, statesName, _states, indexName){
+						//TODO continuar daqui
+						let stateName = statesName[indexName];
+						indexName++;
+						_states.forEach(function(_state) {
+							if(_state._name == stateName){
+								if((indexName+1) == statesName.length) {
+									state._name = statesName[indexName];
+									_state.children = _state.children||[];
+									_state.children.push(state);
+									_state.config.children = _state.config.children||[];
+									_state.config.children.push(state.config);
+								} else {
+									addChild(state, statesName, _state.children, indexName);
+								}
+							}
 						});
 					}
 
