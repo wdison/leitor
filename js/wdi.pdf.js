@@ -4,7 +4,7 @@ $(function(){
         var pdfjsLib = window['pdfjs-dist/build/pdf'] || window.pdfjsLib;
 
         /* The workerSrc property shall be specified.*/
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdfjs-dist/build/pdf.worker.min.js';
+        /*pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdfjs-dist/build/pdf.worker.min.js';*/
 
         var pdfDoc = null,
         pageNum = 1,

@@ -1,5 +1,5 @@
-(function(window) {
-    window.wdi = window.wdi || {};
+(function(global) {
+    global.wdi = global.wdi || {};
     var audio = wdi.audio = wdi.audio ||
     {
         pause: wdiPause,
@@ -101,7 +101,7 @@
 
     function wdiConfigVoice() {
         var msgConfig = audio.config;
-        var voices = window.speechSynthesis.getVoices();
+        var voices = global.speechSynthesis.getVoices();
         msgConfig.voice = voices[$('#voices').val()];
         if(!msgConfig.voice) {
             voices.forEach(function(voice, index) {
@@ -129,12 +129,14 @@
         }
     }
 
-})(window||{});
+})(this||{});
 
 $(function(){
-    let timeoutInit = 3000;
-    speechSynthesis.onvoiceschanged = function() {
-        setTimeout(function(){
+    /*let timeoutInit = 3000;*/
+    speechSynthesis.onvoiceschanged = voicesPopulate;
+
+    function voicesPopulate() {
+        /*setTimeout(function(){*/
             var $voicelist = $('#voices');
 
             if($voicelist.find('option').length == 0) {
@@ -146,12 +148,16 @@ $(function(){
                     $voicelist.append($option);
                 });
 
-                $voicelist.material_select();
+                /*$voicelist.material_select();*/
             }
-            timeoutInit = 0;
-        }, timeoutInit);
+            /*timeoutInit = 0;*/
+        /*}, timeoutInit);*/
     }
-    $('#wdi_play').click(wdi.audio.play);
-    $('#wdi_pause').click(wdi.audio.pause);
-    $('#wdi_stop').click(wdi.audio.stop);
+
+    setTimeout(function(){
+        voicesPopulate();
+        $('#wdi_play').click(wdi.audio.play);
+        $('#wdi_pause').click(wdi.audio.pause);
+        $('#wdi_stop').click(wdi.audio.stop);
+    }, 3000);
 });
