@@ -5,6 +5,10 @@
   "main":"wdi_node_express.js",
   "author": "José Wdison de Souza <wdison@hotmail.com>",
   "license": "MIT",
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "engines": {
     "node": ">= 10.x"
   },
