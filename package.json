@@ -1,0 +1,17 @@
+{
+  "name": "leitor",
+  "version": "1.0.0",
+  "main": "./wdi_node_express.js",
+  "description": "Leitor",
+  "author": "José Wdison de Souza <wdison@hotmail.com>",
+  "directories": {
+    "lib": "./lib2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "scripts": {
+    "start": "node wdi_node_express.js"
+  }
+}
