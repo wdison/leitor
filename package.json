@@ -10,8 +10,5 @@
   "license": "MIT",
   "engines": {
     "node": ">= 6.0.0"
-  },
-  "scripts": {
-    "start": "node wdi_node_express.js"
   }
 }
